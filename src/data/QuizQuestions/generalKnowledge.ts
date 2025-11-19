@@ -21,7 +21,7 @@ export const generalKnowledge: Topic = {
     {
       question: 'What is the name of this reptile?',
       image: Reptile,
-      choices: ['Snake', 'Turtle', 'Crocodile', 'Lizard'],
+      choices: ['SPEA', 'Turtle', 'Crocodile', 'Lizard'],
       type: 'MCQs',
       correctAnswers: ['Turtle'],
       score: 10,

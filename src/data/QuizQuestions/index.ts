@@ -2,6 +2,8 @@ import { generalKnowledge } from './generalKnowledge'
 import { javascript } from './javascript'
 import { python } from './python'
 import { react } from './react'
+import { alingana } from './alingana'
+
 
 // Question Types
 // 1. MCQs | Multiple Choice | single
@@ -35,4 +37,5 @@ export const quiz: Record<string, Topic> = {
   React: react,
   Python: python,
   'General Knowledge': generalKnowledge,
+  Alingana: alingana
 }
