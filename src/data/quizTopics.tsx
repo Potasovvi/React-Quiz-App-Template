@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+/*
 import Angular from '../assets/icons/angular.svg?react'
 import CSS from '../assets/icons/css-3.svg?react'
 import Django from '../assets/icons/dj.svg?react'
@@ -8,7 +9,9 @@ import Kotlin from '../assets/icons/kotlin.svg?react'
 import Laravel from '../assets/icons/laravel.svg?react'
 import Python from '../assets/icons/python.svg?react'
 import ReactIcon from '../assets/icons/react.svg?react'
+*/
 import BulbIcon from '../assets/icons/bulb.svg?react'
+
 
 type QuizTopic = {
   title: string
@@ -17,6 +20,7 @@ type QuizTopic = {
 }
 
 export const quizTopics: QuizTopic[] = [
+  /*
   {
     title: 'React',
     icon: <ReactIcon />,
@@ -29,10 +33,12 @@ export const quizTopics: QuizTopic[] = [
     title: 'Python',
     icon: <Python />,
   },
+  */
   {
-    title: 'General Knowledge',
+    title: 'Alingana',
     icon: <BulbIcon />,
   },
+  /*
   {
     title: 'Gatsby',
     icon: <Gatsby />,
@@ -63,4 +69,5 @@ export const quizTopics: QuizTopic[] = [
     icon: <Laravel />,
     disabled: true,
   },
+  */
 ]
