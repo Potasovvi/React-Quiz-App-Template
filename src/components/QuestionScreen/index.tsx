@@ -12,7 +12,7 @@ import QuizHeader from './QuizHeader'
 const QuestionScreen: FC = () => {
   const [activeQuestion, setActiveQuestion] = useState<number>(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
-  const [showTimerModal, setShowTimerModal] = useState<boolean>(false)
+  const [showTimerModal] = useState<boolean>(false)
   const [showResultModal, setShowResultModal] = useState<boolean>(false)
 
   const [questionTimer, setQuestionTimer] = useState(15)
