@@ -9,7 +9,7 @@ interface ResultOverviewProps {
 }
 
 const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
-  const { quizDetails, endTime } = useQuiz()
+  const { quizDetails } = useQuiz()
 
   const totalQuestionAttempted = result.length
 
