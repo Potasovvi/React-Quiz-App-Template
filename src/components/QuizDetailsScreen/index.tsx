@@ -10,7 +10,7 @@ import PageCenter from '../ui/PageCenter'
 const QuizDetailsScreen = () => {
   const { setCurrentScreen, quizDetails } = useQuiz()
 
-  const { selectedQuizTopic, totalQuestions, totalScore, totalTime } = quizDetails
+  const { selectedQuizTopic, totalQuestions, totalScore } = quizDetails
 
   const goToQuestionScreen = () => {
     setCurrentScreen(ScreenTypes.QuestionScreen)
