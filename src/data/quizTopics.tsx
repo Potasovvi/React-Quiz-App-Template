@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
-/*
+
 import Angular from '../assets/icons/angular.svg?react'
+/*
 import CSS from '../assets/icons/css-3.svg?react'
 import Django from '../assets/icons/dj.svg?react'
 import Gatsby from '../assets/icons/gatsby.svg?react'
@@ -37,6 +38,10 @@ export const quizTopics: QuizTopic[] = [
   {
     title: 'Alingana',
     icon: <BulbIcon />,
+  },
+  {
+    title: 'PULP',
+    icon: <Angular />,
   },
   /*
   {

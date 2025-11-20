@@ -15,18 +15,22 @@ const QuestionScreen: FC = () => {
   const [showTimerModal, setShowTimerModal] = useState<boolean>(false)
   const [showResultModal, setShowResultModal] = useState<boolean>(false)
 
+  const [questionTimer, setQuestionTimer] = useState(15)
+
   const {
     questions,
     quizDetails,
     result,
     setResult,
     setCurrentScreen,
-    timer,
-    setTimer,
-    setEndTime,
+    //timer,
+    //setTimer,
+    //setEndTime,
   } = useQuiz()
 
+  // nuovo stato per timer per domanda
   const currentQuestion = questions[activeQuestion]
+  const progress = (questionTimer / 15) * 100;
 
   const { question, type, choices, code, image, correctAnswers } = currentQuestion
 
@@ -42,12 +46,30 @@ const QuestionScreen: FC = () => {
       setActiveQuestion((prev) => prev + 1)
     } else {
       // how long does it take to finish the quiz
-      const timeTaken = quizDetails.totalTime - timer
-      setEndTime(timeTaken)
+      //const timeTaken = quizDetails.totalTime - timer
+      //setEndTime(timeTaken)
       setShowResultModal(true)
     }
     setSelectedAnswer([])
   }
+
+  // countdown per ogni domanda
+  useEffect(() => {
+    if (questionTimer === 0) {
+      onClickNext()
+    }
+
+    const interval = setInterval(() => {
+      setQuestionTimer(prev => prev - 1)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [questionTimer])
+
+  // reset timer quando cambia domanda
+  useEffect(() => {
+    setQuestionTimer(15)
+  }, [activeQuestion])
 
   const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target
@@ -82,7 +104,7 @@ const QuestionScreen: FC = () => {
   }, [showTimerModal, showResultModal])
 
   // timer hooks, handle conditions related to time
-  useTimer(timer, quizDetails, setEndTime, setTimer, setShowTimerModal, showResultModal)
+  //useTimer(timer, quizDetails, setEndTime, setTimer, setShowTimerModal, showResultModal)
 
   return (
     <PageCenter>
@@ -93,8 +115,19 @@ const QuestionScreen: FC = () => {
         <QuizHeader
           activeQuestion={activeQuestion}
           totalQuestions={quizDetails.totalQuestions}
-          timer={timer}
+          timer={questionTimer}
         />
+
+      {/* Barra di progresso per il timer */}
+      <div className="w-full bg-gray-300 rounded-full h-4 my-4">
+          <div
+            className={`h-4 rounded-full transition-all duration-1000 ${
+            progress > 50 ? "bg-green-500" : progress > 20 ? "bg-yellow-500" : "bg-red-500"
+            }`}
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+
         <Question
           question={question}
           code={code}

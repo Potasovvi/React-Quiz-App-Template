@@ -3,6 +3,7 @@ import { javascript } from './javascript'
 import { python } from './python'
 import { react } from './react'
 import { alingana } from './alingana'
+import { PULP } from './PULP'
 
 
 // Question Types
@@ -37,5 +38,6 @@ export const quiz: Record<string, Topic> = {
   React: react,
   Python: python,
   'General Knowledge': generalKnowledge,
-  Alingana: alingana
+  Alingana: alingana,
+  PULP: PULP
 }

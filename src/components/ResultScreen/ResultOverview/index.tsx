@@ -31,10 +31,7 @@ const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
       <p className="mt-4 text-lg font-medium">
         Score secured:<HighlightedText> {obtainedScore} </HighlightedText>/{' '}
         {quizDetails.totalScore}
-      </p>
-      <p className="mt-4 text-lg font-medium">
-        Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
-      </p>
+      </p>      
       <p className="mt-4 text-lg font-medium">
         Status:<HighlightedText> {calculateStatus}</HighlightedText>
       </p>
