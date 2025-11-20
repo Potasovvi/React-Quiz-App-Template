@@ -1,6 +1,6 @@
 import { useQuiz } from '../../../context/QuizContext'
 import { Result } from '../../../types'
-import { convertSeconds } from '../../../utils/helpers'
+//import { convertSeconds } from '../../../utils/helpers'
 import { FC } from 'react'
 import HighlightedText from '../../ui/HighlightedText'
 

@@ -1,7 +1,7 @@
 import { AppLogo, StartIcon } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
 import { ScreenTypes } from '../../types'
-import { convertSeconds } from '../../utils/helpers'
+//import { convertSeconds } from '../../utils/helpers'
 import Button from '../ui/Button'
 import CenterCardContainer from '../ui/CenterCardContainer'
 import HighlightedText from '../ui/HighlightedText'
