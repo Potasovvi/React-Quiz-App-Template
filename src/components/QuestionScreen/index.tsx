@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import { AppLogo, CheckIcon, Next, TimerIcon } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
-import { useTimer } from '../../hooks'
+//import { useTimer } from '../../hooks'
 import { ScreenTypes } from '../../types'
 import Button from '../ui/Button'
 import ModalWrapper from '../ui/ModalWrapper'
@@ -12,7 +12,7 @@ import QuizHeader from './QuizHeader'
 const QuestionScreen: FC = () => {
   const [activeQuestion, setActiveQuestion] = useState<number>(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
-  const [showTimerModal, setShowTimerModal] = useState<boolean>(false)
+  //const [showTimerModal, setShowTimerModal] = useState<boolean>(false)
   const [showResultModal, setShowResultModal] = useState<boolean>(false)
 
   const [questionTimer, setQuestionTimer] = useState(15)
